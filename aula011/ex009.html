@@ -15,13 +15,15 @@
 
     <script>
         function checar() {
-            var pais = document.querySelector('input#txtpais')
-            var res = document.querySelector('div#res')
-            res.innerHTML = `Você é de <strong>${pais}</strong>`
-            if (pais == 'Brasil') {
-                res.innerHTML += `<p>Você é Brasileiro.</p>`
+            var pais = document.querySelector('input#txtpais');
+            var res = document.querySelector('div#res');
+            
+            res.innerHTML = `Você é de <strong>${pais.value}</strong>`;
+
+            if (pais == 'Brasil' || pais == 'brasil' || pais == 'BRASIL') {
+                res.innerHTML += `<p>Você é Brasileiro.</p>`;
             } else {
-                res.innerHTML +=`<p>Você é Estrangeiro.</p>`
+                res.innerHTML +=`<p>Você é Estrangeiro.</p>`;
             }
         }
         
